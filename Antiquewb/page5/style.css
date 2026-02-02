@@ -1,0 +1,242 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  /* 商品頁2 - RWD */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1600px;
+  max-height: 896px;
+  background: #0b0b0b;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* logo */
+.logo-container {
+  position: absolute;
+  width: auto;
+  left: 5%;
+  top: 20px;
+  z-index: 100;
+}
+
+.logo {
+  font-family: "Modern No. 20", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(24px, 5vw, 48px);
+  line-height: 1.1;
+  text-align: left;
+  color: #ffffff;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+/* Search Icon */
+.search-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 5%;
+  top: 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.search-icon .vector-circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  left: 5px;
+  top: 5px;
+  box-sizing: border-box;
+}
+
+.search-icon .vector-line {
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background: #ffffff;
+  bottom: 8px;
+  right: 6px;
+  transform: rotate(45deg);
+}
+
+/* Text Wrapper */
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 40%;
+  min-width: 320px;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.description {
+  width: 100%;
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(18px, 2.5vw, 32px);
+  line-height: 1.4;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.main-title {
+  width: 100%;
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(40px, 8vw, 80px);
+  line-height: 1.2;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.subtitle {
+  width: 100%;
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(20px, 4vw, 36px);
+  line-height: 1.2;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* Images Section */
+.bg-red {
+  position: absolute;
+  width: 40%;
+  height: 90%;
+  right: 5%;
+  top: 5%;
+  background: url("../images/page5/bg-red.png") no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.main-image {
+  position: absolute;
+  width: 40%;
+  height: 90%;
+  right: 15%; /* 向左偏移呈現疊加感 */
+  top: 2%;
+  background: url("../images/page5/Buddha's%20Head.png") no-repeat center center;
+  background-size: contain;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* NEXT Link */
+.next-link {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(24px, 3vw, 36px);
+  color: #ffffff;
+  opacity: 0.5;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.next-link:hover {
+  opacity: 1;
+}
+
+/* 針對行動裝置 (手機/平板直向) 的優化 */
+@media (max-width: 1024px) {
+  .container {
+    height: auto;
+    min-height: 100vh;
+    max-height: none;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+  }
+
+  .text-wrapper {
+    position: relative;
+    width: 90%;
+    left: 0;
+    top: 0;
+    transform: none;
+    margin-bottom: 40px;
+    order: 2;
+  }
+
+  .bg-red {
+    position: relative;
+    width: 80%;
+    height: 300px;
+    right: 0;
+    top: 0;
+    margin-bottom: 40px;
+    order: 1;
+  }
+
+  .main-image {
+    position: absolute;
+    width: 70%;
+    height: 350px;
+    right: 15%;
+    top: 20px; /* 配合手機版圖片位置 */
+    order: 1;
+  }
+
+  .next-link {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    margin-top: 20px;
+    padding-bottom: 50px;
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .bg-red {
+      height: 200px;
+  }
+  .main-image {
+      height: 250px;
+      right: 10%;
+  }
+}

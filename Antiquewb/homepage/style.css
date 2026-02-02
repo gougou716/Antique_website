@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  /* 主頁 */
+  position: relative;
+  width: 1600px;
+  height: 896px;
+  background: #0b0b0b;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Optional: visual separation */
+}
+
+.buddha {
+  /* Buddha */
+  position: absolute;
+  width: 470px;
+  height: 877px;
+  left: 1050px;
+  top: 19px;
+
+  background: url("../images/page1/Buddha.png") no-repeat center center;
+  background-size: cover; /* Ensure it fills the box if dimensions slightly differ */
+  opacity: 0.8;
+}
+
+.main-title {
+  /* 主頁-大標題 */
+  position: absolute;
+  width: 1249px;
+  height: 441px;
+  left: calc(50% - 1249px / 2 - 0.5px);
+  top: 370px;
+
+  font-family: "Modern No. 20", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 128px;
+  line-height: 137px;
+  text-align: center;
+
+  color: #ffffff;
+
+  opacity: 0.6;
+  margin: 0;
+  z-index: 10; /* Ensure text is above background */
+  display: flex;
+  justify-content: center;
+  /* Align items might need adjustment depending on how the text sits in the box. 
+       Given the height (441) and font-size (128), it's likely a container for layout. */
+}
+
+.sub-title {
+  /* 主頁-小標題 */
+  position: absolute;
+  width: 547px;
+  height: 58px;
+  left: 573px;
+  top: 508px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 61px;
+  text-align: center;
+
+  color: #ffffff;
+
+  opacity: 0.8;
+  margin: 0;
+  z-index: 10;
+}
+
+.wood {
+  /* wood */
+  position: absolute;
+  width: 779px;
+  height: 896px;
+  left: 0px;
+  top: 0px;
+
+  background: url("../images/page1/wood.png") no-repeat center center;
+  background-size: cover;
+  opacity: 0.3;
+}
