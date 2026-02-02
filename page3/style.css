@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  /* reels 第一 */
+  position: relative;
+  width: 1600px;
+  height: 896px;
+  background: #0b0b0b;
+  overflow: hidden;
+}
+
+/* logo */
+.logo-container {
+  position: absolute;
+  width: 241px;
+  height: 64px;
+  left: 15px;
+  top: 20px;
+}
+
+.logo {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  font-family: "Modern No. 20", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 51px;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+/* Search Icon */
+.search-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0.62%;
+  top: 1.67%;
+  cursor: pointer;
+}
+
+.search-icon .vector-circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  left: 5px;
+  top: 5px;
+  box-sizing: border-box;
+}
+
+.search-icon .vector-line {
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background: #ffffff;
+  bottom: 8px;
+  right: 6px;
+  transform: rotate(45deg);
+}
+
+/* Frame 21 - Main Content Wrapper */
+.reels-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 15px; /* Adjusted gap between reels */
+
+  position: absolute;
+  width: 1565px;
+  height: 479px;
+  left: calc(50% - 1565px / 2 + 0.5px);
+  top: calc(50% - 479px / 2 + 99.5px);
+}
+
+/* Base Reel Style */
+.reel {
+  position: relative;
+  width: 380px;
+  height: 479px;
+  flex: none;
+  isolation: isolate;
+}
+
+.reel-bg {
+  position: absolute;
+  width: 380px;
+  height: 479px;
+  left: 0px;
+  top: 0px;
+  background: rgba(217, 217, 217, 0.55);
+  opacity: 0.15; /* Adjusted opacity for better visibility of text */
+  z-index: 0;
+}
+
+.reel-image {
+  position: absolute;
+  z-index: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Reel Specific Images */
+#reel1 .reel-image {
+  width: 120px;
+  height: 461px;
+  left: 130px;
+  top: 12px;
+  background-image: url("../images/page3/teeth.png");
+}
+
+#reel2 .reel-image {
+  width: 304px;
+  height: 191px;
+  left: calc(50% - 304px / 2);
+  top: calc(50% - 191px / 2);
+  background-image: url("../images/page3/bowl.png");
+}
+
+#reel3 .reel-image {
+  width: 170px;
+  height: 319px;
+  left: 105px;
+  top: 79px;
+  background-image: url("../images/page3/BuddhaHand.png");
+}
+
+#reel4 .reel-image {
+  width: 216px;
+  height: 343px;
+  left: 82px;
+  top: calc(50% - 343px / 2 + 14px);
+  background-image: url("../images/page3/rock.png");
+}
+
+/* Frame 15 - Text Content Over Images */
+.text-content {
+  position: absolute;
+  width: 307px;
+  height: 373px;
+  left: 36px;
+  top: 53px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.reel-title {
+  position: absolute;
+  width: 307px;
+  height: 58px;
+  left: 0px;
+  top: 0px;
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.reel-subtitle {
+  position: absolute;
+  width: 307px;
+  height: 39px;
+  left: 0px;
+  top: 79px;
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.reel-desc {
+  position: absolute;
+  width: 307px;
+  height: 234px;
+  left: 0px;
+  top: 139px;
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px; /* Slightly smaller for readability */
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.8;
+  margin: 0;
+}
